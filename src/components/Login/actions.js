@@ -29,9 +29,11 @@ const loginUserFail = (dispatch) => {
 };
 
 const loginUserSuccess = (dispatch, user, navigation) => {
+
   dispatch({
     type: LOGIN_USER_SUCCESS,
     payload: user
   });
+  
   navigation.navigate('Home')
 };

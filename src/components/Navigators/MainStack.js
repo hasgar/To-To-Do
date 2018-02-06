@@ -15,7 +15,7 @@ const MainStack = StackNavigator({
         } },
      Profile: { screen: Profile }  
   }, {
-    initialRouteName: 'Auth'
+    initialRouteName: 'Home'
 })
 
 export default MainStack

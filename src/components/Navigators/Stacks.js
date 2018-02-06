@@ -14,7 +14,8 @@ import Tabs from './Tabs'
 
 export const AuthStack = StackNavigator({
   Login: { screen: Login, navigationOptions: {
-    title: 'Login'
+    title: 'Login', 
+    header: null
   }  },
   Signup: { screen: Signup, navigationOptions: {
     title: 'Create Account'

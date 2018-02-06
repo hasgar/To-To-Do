@@ -25,19 +25,23 @@ const styles = {
     paddingRight: 5,
     paddingLeft: 5,
     fontSize: 18,
+    backgroundColor: 'rgba(0,0,0,0)',
     lineHeight: 23,
     flex: 2
   },
   labelStyle: {
     fontSize: 18,
     paddingLeft: 20,
-    flex: 1
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0)',
+    color: '#fff'
   },
   containerStyle: {
     height: 40,
     flex: 1,
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0)'
   }
 };
 

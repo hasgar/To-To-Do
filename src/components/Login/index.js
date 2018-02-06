@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, ImageBackground, Dimensions, Image } from 'react-native';
 import { connect } from 'react-redux';
 import { loginFormUpdate, loginUser } from './actions';
 import { Card, CardSection, Input, Button, Spinner } from '../common';
@@ -33,16 +33,21 @@ class Login extends Component {
     }
   }
 
-  componentDidMount() {
-    const { setParams } = this.props.navigation;
-    setParams({AuthKey: this.props.navigation.state.key})
-  } 
+
+
 
   render() {
-    
+    const {width, height} = Dimensions.get('window')
     return (
-      <View style={{justifyContent: 'space-between', flex: 1}}>
+      <ImageBackground
+    style={{ width: width, height: height}}
+    source={require('../../resources/images/loginBackground.png')}>
+    <View style={{justifyContent: 'space-between', flex: 1, marginBottom: 20, marginTop: 40}}>
+      
       <Card>
+        <CardSection style={{alignItems: 'center', flexDirection: 'column'}}>
+          <Image source={require('../../resources/images/logo.png')} />
+        </CardSection>
         <CardSection>
           <Input
             label="Email"
@@ -70,12 +75,14 @@ class Login extends Component {
       </Card>
       <Card>
         <CardSection>
-          <Button onPress={() => this.props.navigation.navigate('Signup')}>
+          <Button onPress={() => this.props.navigation.navigate('Signup')} >
             Create Account
           </Button>
         </CardSection>
       </Card>
+      
       </View>
+      </ImageBackground>
     );
   }
 }
@@ -85,6 +92,15 @@ const styles = {
     fontSize: 20,
     alignSelf: 'center',
     color: 'red'
+  },
+  bg: {
+    flex: 1,
+    width: undefined,
+    height: undefined,
+    backgroundColor:'transparent',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute'
   }
 };
 

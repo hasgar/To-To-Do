@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { Text, Button } from 'react-native';
 import { Card, CardSection } from '../common';
 
 class Profile extends Component {
 
   render() {
+      
     return (
      <Card>
         <CardSection>
-        <Text>Profile section</Text>
+        <Button title='Go back' onPress={() => this.props.navigation.goBack(null)}></Button>
         </CardSection>
       </Card>
     );
