@@ -1,5 +1,4 @@
 import firebase from 'firebase';
-import { NavigationActions } from 'react-navigation'
 import {
   LOGIN_FORM_UPDATE,
   LOGIN_USER_SUCCESS,

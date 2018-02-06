@@ -14,4 +14,6 @@ export const LIST_ADD_FAIL = 'list_add_error';
 export const LIST_FETCH = 'list_fetch';
 export const LIST_FETCH_SUCCESS = 'list_fetch_success';
 
+export const TASK_FETCH = 'task_fetch';
+export const TASK_FETCH_SUCCESS = 'task_fetch_success';
 

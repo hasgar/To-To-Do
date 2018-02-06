@@ -1,5 +1,4 @@
 import firebase from 'firebase';
-import { NavigationActions } from 'react-navigation'
 import axios from 'axios'
 import {
     LIST_ADD_FORM_UPDATE,
@@ -40,11 +39,12 @@ export const createList = ({name}) => {
 export const listFetch = () => {
     
     return (dispatch) => {
-        axios.get('https://api.myjson.com/bins/1g271t')
+        dispatch({ type: LIST_FETCH });
+        axios.get('https://api.myjson.com/bins/15x0g1')
         .then(function (response) {
             dispatch({
                 type: LIST_FETCH_SUCCESS,
-                payload: response.data
+                payload: response.data.lists
             })
         })
         .catch(function (error) {

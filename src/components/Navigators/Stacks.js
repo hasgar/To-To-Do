@@ -8,6 +8,7 @@ import Login from '../Login'
 import Signup from '../Signup'
 import List from '../List'
 import ListCreate from '../ListCreate'
+import Task from '../Task'
 import Settings from '../Settings'
 import Profile from '../Profile'
 import Tabs from './Tabs'
@@ -28,10 +29,12 @@ export const ListStack = StackNavigator({
     List: { screen: List, navigationOptions: {
         title: 'Lists'
       } },
-    ListCreate: { screen: ListCreate, navigationOptions: {
-      title: 'Create List' 
-    } 
-  }, 
+      ListCreate: { screen: ListCreate, navigationOptions: {
+        title: 'Create List' 
+      } }, 
+      Task: { screen: Task, navigationOptions: {
+        title: 'Tasks' 
+      } }, 
   }, {
     initialRouteName: 'List',
 })
