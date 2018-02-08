@@ -6,9 +6,9 @@ import { StackNavigator } from 'react-navigation'
 // StackNavigator screens
 import Login from '../Login'
 import Signup from '../Signup'
-import List from '../List'
+import Lists from '../Lists'
 import ListCreate from '../ListCreate'
-import Task from '../Task'
+import List from '../List'
 import Settings from '../Settings'
 import Profile from '../Profile'
 import Tabs from './Tabs'
@@ -26,17 +26,17 @@ export const AuthStack = StackNavigator({
 })
 
 export const ListStack = StackNavigator({
-    List: { screen: List, navigationOptions: {
+    Lists: { screen: Lists, navigationOptions: {
         title: 'Lists'
       } },
       ListCreate: { screen: ListCreate, navigationOptions: {
         title: 'Create List' 
       } }, 
-      Task: { screen: Task, navigationOptions: {
-        title: 'Tasks' 
+      List: { screen: List, navigationOptions: {
+        title: 'List' 
       } }, 
   }, {
-    initialRouteName: 'List',
+    initialRouteName: 'Lists',
 })
 
 export const SettingsStack = StackNavigator({

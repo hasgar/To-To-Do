@@ -16,4 +16,6 @@ export const LIST_FETCH_SUCCESS = 'list_fetch_success';
 
 export const TASK_FETCH = 'task_fetch';
 export const TASK_FETCH_SUCCESS = 'task_fetch_success';
+export const TASK_UPDATE = 'task_update';
+export const TASK_UPDATE_FAIL = 'task_update_success';
 
