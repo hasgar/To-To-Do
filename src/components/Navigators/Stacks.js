@@ -7,7 +7,6 @@ import { StackNavigator } from 'react-navigation'
 import Login from '../Login'
 import Signup from '../Signup'
 import Lists from '../Lists'
-import ListCreate from '../ListCreate'
 import List from '../List'
 import Settings from '../Settings'
 import Profile from '../Profile'
@@ -29,9 +28,6 @@ export const ListStack = StackNavigator({
     Lists: { screen: Lists, navigationOptions: {
         title: 'Lists'
       } },
-      ListCreate: { screen: ListCreate, navigationOptions: {
-        title: 'Create List' 
-      } }, 
       List: { screen: List, navigationOptions: {
         title: 'List' 
       } }, 
