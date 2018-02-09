@@ -1,7 +1,7 @@
 import firebase from 'firebase';
 import axios from 'axios'
 import {
-    LIST_ADD_FORM_UPDATE,
+    LIST_FORM_UPDATE,
     LIST_ADD,
     LIST_ADD_SUCCESS,
     LIST_FETCH,
@@ -11,7 +11,7 @@ import {
 
 export const formUpdate = ({prop, value}) => {
     return {
-      type: LIST_ADD_FORM_UPDATE,
+      type: LIST_FORM_UPDATE,
       payload: {prop,value}
     };
 };
@@ -25,7 +25,8 @@ export const listCreate = (name) => {
         })
         .catch(function (error) {
             dispatch({
-                type: LIST_ADD_FAIL
+                type: LIST_ADD_FAIL,
+                payload: {id: 9, name: name, items: []}
             })
         });
     };
